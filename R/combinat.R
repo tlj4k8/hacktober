@@ -7,11 +7,12 @@ require(tidyr)
 
 
 # Read several CSVs as independent lists for future combination
-one_bedroom_zhvi <- read.csv('/Users/logan.ice/Documents/git/site/hacktober/data/zhvi_1br_by_zip.csv', stringsAsFactors = FALSE)
-two_bedroom_zhvi <- read.csv('/Users/logan.ice/Documents/git/site/hacktober/data/zhvi_2br_by_zip.csv', stringsAsFactors = FALSE)
-three_bedroom_zhvi <- read.csv('/Users/logan.ice/Documents/git/site/hacktober/data/zhvi_3br_by_zip.csv', stringsAsFactors = FALSE)
-four_bedroom_zhvi <- read.csv('/Users/logan.ice/Documents/git/site/hacktober/data/zhvi_4br_by_zip.csv', stringsAsFactors = FALSE)
-fiveplus_bedroom_zhvi <- read.csv('/Users/logan.ice/Documents/git/site/hacktober/data/zhvi_5plusbr_by_zip.csv', stringsAsFactors = FALSE)
+# Location Reference is to the root git folder 
+one_bedroom_zhvi <- read.csv('./data/zhvi_1br_by_zip.csv', stringsAsFactors = FALSE)
+two_bedroom_zhvi <- read.csv('./data/zhvi_2br_by_zip.csv', stringsAsFactors = FALSE)
+three_bedroom_zhvi <- read.csv('./data/zhvi_3br_by_zip.csv', stringsAsFactors = FALSE)
+four_bedroom_zhvi <- read.csv('./data/zhvi_4br_by_zip.csv', stringsAsFactors = FALSE)
+fiveplus_bedroom_zhvi <- read.csv('./data/zhvi_5plusbr_by_zip.csv', stringsAsFactors = FALSE)
 
 
 # Add variable to each list with number of bedrooms
