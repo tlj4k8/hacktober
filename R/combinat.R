@@ -42,5 +42,5 @@ newcombo$Week <- gsub("X", "", newcombo$Week)
 
 
 # Write a combined csv back to the repo
-write.csv(newcombo, '/Users/logan.ice/Documents/git/site/hacktober/data/combined_zip_zhvi.csv')
+write.csv(newcombo, './data/combined_zip_zhvi.csv')
 
