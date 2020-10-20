@@ -22,9 +22,9 @@ three_bedroom_zhvi$size <- 'threeBedroom'
 four_bedroom_zhvi$size <- 'fourBedroom'
 fiveplus_bedroom_zhvi$size <- 'fiveplusBedroom'
 
+
 # Combine like Megazord
 combined <- rbind(one_bedroom_zhvi,two_bedroom_zhvi,three_bedroom_zhvi,four_bedroom_zhvi,fiveplus_bedroom_zhvi)
-
 
 
 # Make Long for visualization purposes. Dropping NAs for ease of viewing (and viz purposes)
@@ -41,6 +41,15 @@ newcombo <- pivot_longer(
 newcombo$Week <- gsub("X", "", newcombo$Week)
 
 
-# Write a combined csv back to the repo
-write.csv(newcombo, './data/combined_zip_zhvi.csv')
+# Drop columns that aren't of interest
+combodata <- newcombo[ ,c(3,10:12)]
+
+
+# Create Head of Data for testing purposes
+headdata <- combodata[c(1:10),]
+
+
+# Write combined csvs for testing and load
+write.csv(combodata, './data/combined_zip_zhvi.csv', row.names = FALSE)
+write.csv(headdata, './data/head_combined_zip_zhvi.csv', row.names = FALSE)
 
