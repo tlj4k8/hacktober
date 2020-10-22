@@ -11,6 +11,8 @@
 Run `node --version` and `npm --version` in the terminal to verify install was successful
 
 ## Project setup
+
+Verify you are in the correct directory `hacktober-web/` not `hacktober/`
 ```
 npm install
 ```
