@@ -1,10 +1,5 @@
-from pathlib import Path
-import sys
-
 import pymysql
-
-sys.path.insert(1, str(Path(__file__).parent.parent))
-from config import configuration
+from src.main.python.config import configuration
 
 def get_all_houses():
     configs = configuration.fetch_database_configs(configuration.DEVELOPMENT_CONFIG_FILE_PATH)
@@ -15,7 +10,7 @@ def get_all_houses():
 
     try:
         cur = connection.cursor()
-        cur.execute("select * from house")
+        cur.execute("select * from house limit 10")
         return cur.fetchall()
     finally:
         connection.close()

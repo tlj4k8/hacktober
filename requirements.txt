@@ -1,0 +1,3 @@
+[Python]
+flask: 1.1.2 # Web API framework.  Used here to build an integration layer
+pymysql: 0.10.1 # Python's MySQL Library
