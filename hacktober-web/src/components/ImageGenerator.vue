@@ -9,9 +9,6 @@
 import axios from "axios";
 export default {
   name: 'ImageGenerator',
-  props: {
-    title: String
-  },
   data: () => {
     return {
       image: ''
