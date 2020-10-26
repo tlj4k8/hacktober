@@ -21,6 +21,8 @@ home data.
 
 ## Project setup
 
+Verify you are in the correct directory `hacktober-web/` not `hacktober/`
+
 ```bash
 npm install
 ```
