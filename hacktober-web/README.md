@@ -48,3 +48,8 @@ npm run lint
 ### Customize Vue configuration
 
 See [Vue Configuration Reference](https://cli.vuejs.org/config/).
+
+### Editing our README
+
+Feel free to make any updates necessary for the success of the project
+in a proper pull request to be reviewed by the team.
