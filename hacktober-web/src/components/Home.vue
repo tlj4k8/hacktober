@@ -1,17 +1,22 @@
 <template>
-  <div class="home">
+  <div class="hack-home">
     <img 
       alt="Hacktober Pumpkin"
-      class='home_image'
+      class='hack-home_image'
       src="../assets/hacktober-pumpkin.jpeg"
     >
-    <h1 class="home_title">{{ title }}</h1>
+    <h1 class="hack-home_title">{{ title }}</h1>
+    <ImageGenerator/>
   </div>
 </template>
 
 <script>
+import ImageGenerator from "./ImageGenerator";
 export default {
   name: 'Home',
+  components: {
+    ImageGenerator
+  },
   props: {
     title: String
   }
@@ -20,22 +25,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.home {
+.hack-home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
 }
-.home_title {
+.hack-home_title {
   font-size: 96px;
   color: #F75F1C;
   width: 100%;
 }
-.home_image {
-  align-self: center;
+.hack-home_image {
   height: auto;
+  margin: 20px auto;
   max-width: 300px;
-  width: 100%;
 }
 </style>
