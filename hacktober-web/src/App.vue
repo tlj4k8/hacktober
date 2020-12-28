@@ -1,12 +1,11 @@
 <template>
   <div class="app">
-    <Home title="Hacking the Tobers!"/>
+    <Home/>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
-
 export default {
   name: 'App',
   components: {
@@ -27,7 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #000;
+  background-color: rgb(220, 238, 218);
   padding: 4em 0;
 }
 </style>

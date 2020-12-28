@@ -1,44 +1,30 @@
 <template>
   <div class="hack-home">
-    <img 
-      alt="Hacktober Pumpkin"
-      class='hack-home_image'
-      src="../assets/hacktober-pumpkin.jpeg"
-    >
-    <h1 class="hack-home_title">{{ title }}</h1>
-    <ImageGenerator/>
+    <HomeTitle title="Vue Virtual DOM"/>
+    <HomeContent/>
   </div>
 </template>
-
 <script>
-import ImageGenerator from "./ImageGenerator";
+import HomeTitle from './HomeTitle.vue'
+import HomeContent from './HomeContent';
 export default {
   name: 'Home',
   components: {
-    ImageGenerator
+    HomeTitle,
+    HomeContent
   },
-  props: {
-    title: String
+  render(h) {
+    return h('div', {
+      class: 'hack-home'
+    })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hack-home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
-}
-.hack-home_title {
-  font-size: 96px;
-  color: #F75F1C;
-  width: 100%;
-}
-.hack-home_image {
-  height: auto;
-  margin: 20px auto;
-  max-width: 300px;
 }
 </style>
