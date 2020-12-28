@@ -7,7 +7,7 @@ export default {
   render(h) {
     return h('h2', {
       class: 'hack-home_title',
-    },this.title)
+    }, this.title)
   }
 }
 </script>
